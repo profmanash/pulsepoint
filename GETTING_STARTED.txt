@@ -1,0 +1,218 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║               🏥 PULSEPOINT HOMECARE - FLASK APPLICATION                  ║
+║                         Getting Started Guide                             ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📋 QUICK START (Choose One)
+═══════════════════════════════════════════════════════════════════════════
+
+🪟 WINDOWS USERS:
+  1. Double-click: setup.bat
+  2. Open browser: http://localhost:5000
+
+🍎 MAC/LINUX USERS:
+  1. Open terminal and run:
+     chmod +x setup.sh
+     ./setup.sh
+  2. Open browser: http://localhost:5000
+
+📱 MANUAL SETUP:
+  1. python3 -m venv venv
+  2. source venv/bin/activate (Mac/Linux) or venv\Scripts\activate (Windows)
+  3. pip install -r requirements.txt
+  4. python app.py
+  5. Open browser: http://localhost:5000
+
+═══════════════════════════════════════════════════════════════════════════
+
+📂 WHAT YOU HAVE
+═══════════════════════════════════════════════════════════════════════════
+
+✅ Complete Flask Application
+   - Backend with database support
+   - Frontend with Lenis smooth scroll
+   - Admin dashboard for enquiry management
+   - All necessary configuration files
+
+✅ Documentation
+   - README.md - Full project overview
+   - SETUP_GUIDE.md - Detailed setup instructions
+   - QUICK_REFERENCE.md - Quick command reference
+   - PROJECT_SUMMARY.md - Complete feature list
+
+✅ Ready for Deployment
+   - Setup scripts for easy installation
+   - Database migrations support
+   - Environment configuration
+   - Multiple database support (SQLite, PostgreSQL, MySQL)
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 WHAT TO DO NEXT
+═══════════════════════════════════════════════════════════════════════════
+
+1. RUN THE APPLICATION
+   └─ Execute setup.bat (Windows) or setup.sh (Mac/Linux)
+
+2. EXPLORE THE WEBSITE
+   └─ Main site: http://localhost:5000
+   └─ Admin: http://localhost:5000/admin/enquiries
+
+3. TEST THE FEATURES
+   └─ Submit an enquiry via the contact form
+   └─ View submissions in the admin dashboard
+   └─ Update enquiry status
+
+4. CUSTOMIZE
+   └─ Edit .env for configuration
+   └─ Update colors/text in templates/index.html
+   └─ Add more services in app.py
+
+5. DEPLOY
+   └─ Read SETUP_GUIDE.md for deployment instructions
+   └─ Choose hosting (Heroku, AWS, etc.)
+   └─ Configure production settings
+
+═══════════════════════════════════════════════════════════════════════════
+
+📚 DOCUMENTATION GUIDE
+═══════════════════════════════════════════════════════════════════════════
+
+START HERE:
+├─ README.md
+│  ├─ Project overview
+│  ├─ Quick start
+│  ├─ Features list
+│  └─ Customization guide
+
+DETAILED SETUP:
+├─ SETUP_GUIDE.md
+│  ├─ Installation steps
+│  ├─ Database configuration
+│  ├─ Deployment guides
+│  └─ Security recommendations
+
+QUICK REFERENCE:
+├─ QUICK_REFERENCE.md
+│  ├─ Common commands
+│  ├─ API endpoints
+│  ├─ Database schema
+│  └─ Troubleshooting
+
+PROJECT DETAILS:
+├─ PROJECT_SUMMARY.md
+│  ├─ Complete features
+│  ├─ File structure
+│  ├─ Deployment options
+│  └─ Next steps
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔧 CONFIGURATION
+═══════════════════════════════════════════════════════════════════════════
+
+Edit .env file to customize:
+
+FLASK_ENV=development          # Change to 'production' when deploying
+FLASK_APP=app.py              # Don't change
+SECRET_KEY=your-key-here      # Change to a secure key
+DATABASE_URL=sqlite:///pulsepoint.db  # Supports PostgreSQL, MySQL
+
+═══════════════════════════════════════════════════════════════════════════
+
+🌐 ACCESSING THE APPLICATION
+═══════════════════════════════════════════════════════════════════════════
+
+WEBSITE:
+  URL: http://localhost:5000
+  Features:
+  ├─ Hero section with CTA buttons
+  ├─ Dynamic service cards
+  ├─ Contact form with validation
+  ├─ Smooth Lenis scroll
+  └─ Fully responsive design
+
+ADMIN DASHBOARD:
+  URL: http://localhost:5000/admin/enquiries
+  Features:
+  ├─ View all enquiries
+  ├─ Filter by status
+  ├─ Update enquiry status
+  ├─ Real-time statistics
+  └─ View detailed information
+
+═══════════════════════════════════════════════════════════════════════════
+
+📊 DATABASE
+═══════════════════════════════════════════════════════════════════════════
+
+The database is created automatically on first run.
+
+Default: SQLite (pulsepoint.db)
+Location: Same folder as app.py
+
+Tables:
+├─ Service (healthcare services offered)
+├─ Enquiry (customer enquiries/bookings)
+└─ ServiceArea (service coverage areas)
+
+Admins can view/manage enquiries via the admin dashboard.
+
+═══════════════════════════════════════════════════════════════════════════
+
+🆘 COMMON ISSUES & SOLUTIONS
+═══════════════════════════════════════════════════════════════════════════
+
+Issue: Port 5000 already in use
+Solution: Change port or kill existing process
+  macOS/Linux: lsof -ti:5000 | xargs kill -9
+  Windows: netstat -ano | findstr :5000
+
+Issue: Module not found error
+Solution: pip install -r requirements.txt
+
+Issue: Database not created
+Solution: python
+         >>> from app import app, init_db
+         >>> init_db()
+         >>> exit()
+
+Issue: Virtual environment not activating
+Solution: 
+  Windows: venv\Scripts\activate
+  Mac/Linux: source venv/bin/activate
+
+═══════════════════════════════════════════════════════════════════════════
+
+📞 SUPPORT & RESOURCES
+═══════════════════════════════════════════════════════════════════════════
+
+Documentation:
+├─ Read README.md for features
+├─ Check SETUP_GUIDE.md for installation
+├─ Use QUICK_REFERENCE.md for commands
+└─ See PROJECT_SUMMARY.md for overview
+
+Troubleshooting:
+├─ Check browser console (F12) for errors
+├─ Read Flask debug output
+└─ Review documentation sections
+
+═══════════════════════════════════════════════════════════════════════════
+
+✨ YOU'RE ALL SET!
+═══════════════════════════════════════════════════════════════════════════
+
+Your PulsePoint Homecare Flask application is ready to run!
+
+1. Execute setup script
+2. Visit http://localhost:5000
+3. Start exploring and customizing
+
+For detailed information, read the documentation files included.
+
+Happy coding! 🚀
+
+═══════════════════════════════════════════════════════════════════════════
